@@ -92,7 +92,18 @@ section {
    min-height: auto; 
    padding-bottom: 7rem;
    align-items: center; 
-   justify-content: center; 
+   justify-content: center;
+   display: none;
+   visibility: hidden; 
+   transform: scale(0);
+   transition: 0.5s; 
+}
+
+.sgin.active {
+   display: block;
+   visibility: visible; 
+   transform: scale(1);
+   transition: 0.5s;
 }
 
 .sgin h2 {
@@ -105,24 +116,6 @@ section {
 
 .sgin h2 span {
    color: var(--main-color); 
-}
-
-
-
-.box {
-   position: relative;
-   max-width: 400px; 
-   display: none;
-   visibility: hidden; 
-   transform: scale(0);
-   transition: 0.5s;
-}
-
-.box.active {
-   display: block;
-   visibility: visible; 
-   transform: scale(1);
-   transition: 0.5s;
 }
 
 .sgin form { 
