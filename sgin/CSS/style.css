@@ -1,0 +1,380 @@
+
+*{
+   margin: 0;
+   padding:  0;
+   box-sizing: border-box;
+   text-decoration: none;
+   border: none;
+   outline: none;
+   scroll-behavior: smooth;
+   font-family: 'Poppins' , sans-serif; 
+}
+
+:root {
+   --bg-color : rgb(17, 12, 6) ; 
+   --second-bg-color :  rgb(59, 33, 0) ; 
+   --main-color : rgb(255, 166, 0) ; 
+   --text-color : white ; 
+}
+
+
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+}
+
+
+body{
+   background: var(--bg-color);
+   color: var(--text-color);
+}
+
+
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 2rem 9%;
+   background:  transparent;
+   display: flex;
+   justify-content:  space-between;
+   align-items: center;
+   z-index: 100;
+   transition: .3s ease;
+   flex-wrap: wrap;
+}
+
+.logo {
+   position: relative; 
+}
+
+.logo img {
+   width: 50px;
+   border-radius: 50%;
+}
+
+.navbar {
+   position: relative;
+}
+
+.navbar a {
+   font-size: 1.7rem;
+   color: var(--text-color);
+   font-weight: 500;
+   margin-left: 3.5rem;
+
+}
+
+.navbar a:hover,
+.navbar a.active,
+.navbar a:target {
+   color: var(--main-color);
+}
+
+#menu-icon {
+   position: relative ;
+   font-size: 3.6rem;
+   color: var(--text-color);
+   cursor:  pointer;
+   display: none ;
+}
+
+section {
+   min-height: 100vh;
+   padding: 10rem 9% 2rem;
+
+}
+
+
+
+.sgin { 
+   min-height: auto; 
+   padding-bottom: 7rem;
+   align-items: center; 
+   justify-content: center; 
+}
+
+.sgin h2 {
+   display: inline-block;
+   position: absolute;
+   left: 50%;
+   font-size: 4rem;
+   transform: translateX(-50%);
+}
+
+.sgin h2 span {
+   color: var(--main-color); 
+}
+
+
+
+.box {
+   position: relative;
+   max-width: 400px; 
+   display: none;
+   visibility: hidden; 
+   transform: scale(0);
+   transition: 0.5s;
+}
+
+.box.active {
+   display: block;
+   visibility: visible; 
+   transform: scale(1);
+   transition: 0.5s;
+}
+
+.sgin form { 
+   max-width: 60rem ;
+   margin: 70px auto; 
+   text-align: center ;
+   border: 2px solid var(--main-color);
+   padding: 50px;
+   border-radius: 15px;
+   background-color: var(--second-bg-color);
+}
+
+.sgin form .input-box {
+   position: relative; 
+   display: flex ;
+   justify-content: space-between;  
+   flex-wrap: wrap ; 
+}
+
+.sgin form .input-box h3 {
+   font-size: 20px;
+   margin-top: 10px;
+}
+.sgin form .input-box .input-field {
+   position: relative; 
+   width: 60%; 
+   margin: .8rem 0 ;
+}
+
+.sgin form .input-box .input-field input {
+   width: 100%; 
+   height: 100%; 
+   padding: 1.5rem; 
+   font-size: 1.6rem; 
+   color: var(--text-color); 
+   background: var(--bg-color);
+   border-radius: .6rem; 
+   border: .2rem solid var(--main-color); 
+   
+}
+
+.sgin form .input-box .input-field input::placeholder {
+   color: var(--text-color);
+}
+
+.sgin form .focus {
+   position: absolute; 
+   top: 0; 
+   left: 0 ;
+   width: 0 ;
+   height: 100%; 
+   background: var(--bg-color);
+   border-radius: .6rem;
+   z-index: -1 ;
+   transition: .5s ease;
+}
+
+.sgin form .input-box .input-field input:focus~.focus,
+.sgin form .input-box .input-field input:valid~.focus {
+   width: 100%;
+}
+
+.sgin form .textarea-field {
+   position: relative; 
+   margin: .8rem 0 2.7rem ;
+   display: flex; 
+}
+
+.sgin form .textarea-field textarea {
+   resize: none;  
+}
+
+
+.sgin form .btn-box.btns{
+   /* position:absolute;
+   left: 50%; 
+   transform: translateX(-0%); */
+   left: 150px;
+   margin: 20px;
+}
+
+.sgin form .btn-box.btns .btn {
+   cursor: pointer;
+}
+
+
+.btn-box .btn {
+   position: relative;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 12rem;
+   height: 100%;
+   padding: 10px;
+   background: var(--main-color);
+   border: .2rem solid var(--main-color);
+   border-radius: .8rem;
+   font-size: 1.8rem;
+   font-weight: 600;
+   letter-spacing: .1rem;
+   color: var(--bg-color);
+   z-index: 1;
+   overflow: hidden;
+   transition: .5s;
+}
+
+.btn-box .btn:hover {
+   color: var(--main-color);
+}
+
+.btn-box .btn::before {
+   content:'' ;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background: var(--bg-color);
+   z-index: -1;
+   transition: .5s;
+}
+
+.btn-box .btn:hover::before {
+   width: 100%;
+}
+
+.sgin form h3 {
+   font-size: 20px;
+}
+
+.sgin form h3 a {
+   color: var(--main-color);
+}
+
+.sgin form h3 a:hover {
+   color: magenta;
+}
+
+
+@media (max-width: 1200px) {
+   html {
+      font-size: 55%;
+   }
+}
+
+
+@media (max-width: 991px) {
+   .header {
+      padding: 2rem 4%;
+   }
+
+   section {
+      padding: 10rem 4% 2rem ;
+   }
+
+}
+
+
+@media (max-width: 768px) {
+   .header{
+      background: var(--bg-color);
+   }
+
+   #menu-icon{
+      display: block;
+   }
+
+   .navbar {
+      position: absolute;
+      top: 100% ; 
+      left: -100% ; 
+      width: 100%; 
+      padding: 1rem 4%;
+      background: var(--main-color);
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+      z-index: 1;
+      transition: .25s ease;
+      transition-delay: .25s;
+   }
+
+   .navbar.active {
+      left: 0;
+      transition-delay: 0s;
+   }
+
+   .navbar .active-nav {
+      position: absolute; 
+      top : 0 ; 
+      left: -100%; 
+      width: 100%; 
+      height: 100%; 
+      background: var(--bg-color);
+      border-top: .1rem solid rgba(0, 0, 0, .2);
+      z-index: -1;
+      transition: .25s ease;
+      transition-delay: 0s;
+   }
+
+   .navbar.active .active-nav {
+      left: 0;
+      transition-delay: .25s;
+   }
+
+   .navbar a {
+      display: block; 
+      font-size: 2rem;
+      margin: 3rem 0 ;
+      transform: translateX(-20rem);
+      transition: .25s ease; 
+      transition-delay: 0s;
+   }
+
+   .navbar.active a{
+      transform: translateX(0);
+      transition-delay: .25s ;
+   }
+
+   .sgin form  {
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center; 
+      text-align: center;
+      justify-content: center;
+   }
+
+   .sgin form .input-box .input-field {
+      position: relative; 
+      width: 100%; 
+      margin: 1rem 0 ;
+   }
+   
+   .sgin form .btn-box.btns{
+      left: -20px;
+   }
+}
+
+
+@media (max-width: 520px) {
+   html {
+      font-size: 50%; 
+   }
+}
+
+@media (max-width: 462px) {
+
+   .sgin form .input-box .input-field {
+      width: 100%; 
+   }
+
+   .sgin form .input-box h3 {
+      font-size: 20px;
+   }
+} 
+
+

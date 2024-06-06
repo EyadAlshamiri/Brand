@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>تسجبل الدخول</title> 
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel = 'stylesheet' > 
+   <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body dir="rtl">
+
+   <header class="header">
+      <a href="#" class="logo"><img src="../img/logo.jpg" alt="Logo"> </a>
+
+      <div class="bx bx-menu" id="menu-icon" > </div>
+
+      <div class="navbar">
+         <a href="../index.html#home" class="active">الرئيسية </a>
+         <a href="../my_list/list.html" >ألقائمة </a>
+         <a href="../index.html#products" >ألمنتجات </a>
+         <a href="../index.html#contact" >أتصل بنا </a>
+         <a href="#" > تسجيل الدخول  </a>
+
+         <span class="active-nav"></span>
+      </div>
+   </header>
+   <div id="cursor"> </div> 
+   <!--  ============================== -->
+
+
+   <section class="sgin" id="contact">
+      <h2 class="heading">تسجيل الدخول</h2>
+
+      <form action="http://localhost/PHP_File/" method="post" class="box up active">
+
+         <div class="input-box">
+            <h3>أسم المستخدم </h3>
+            <div class="input-field">
+               <input type="text" id="username" name="username" placeholder="ألاسم الكلي" required>
+               <span class="focus"></span> 
+            </div>
+         </div>
+
+         <div class="input-box">
+            <h3>ألبريد الالكتروني </h3>
+            <div class="input-field">
+               <input type="email" id="email" placeholder="ألإيميل " name="email" required>
+               <span class="focus"></span> 
+            </div>
+
+         </div>
+
+         <div class="input-box">
+            <h3>كلمة السر </h3>
+            <div class="input-field">
+               <input type="password" id="password" name="password" placeholder=" كلمة السر" required>
+               <span class="focus"></span> 
+            </div>
+         </div>
+         
+         <div class="input-box">
+            <h3>تأكيد كلمة السر </h3>
+            <div class="input-field">
+               <input type="password"  id="conf_password" name="conf_password" placeholder=" تأكيد كلمة السر" required>
+               <span class="focus"></span> 
+            </div>
+         </div>
+
+         <div class="btn-box btns">
+            <button type="submit" class="btn">إرسال </button>
+         </div>
+
+         <div>
+            <h3>
+               أملك حساب  <a href="#" onclick="in_up('in')"> تسجيل الدحول </a> 
+            </h3>
+         </div>
+      </form>
+
+      <form action="http://localhost/PHP_File/" method="post" class="box in">
+
+         <div class="input-box">
+            <h3>ألبريد الالكتروني </h3>
+            <div class="input-field">
+               <input type="email" id="email" placeholder="ألإيميل " name="email" required>
+               <span class="focus"></span> 
+            </div>
+
+         </div>
+
+         <div class="input-box">
+            <h3>كلمة السر </h3>
+            <div class="input-field">
+               <input type="password" id="password" name="password" placeholder=" كلمة السر" required>
+               <span class="focus"></span> 
+            </div>
+         </div>
+         
+         <div class="btn-box btns">
+            <button type="submit" class="btn">إرسال </button>
+         </div>
+         <div>
+            <h3>
+               لا أملك حساب  <a href="#" onclick="in_up('up')"> إنشاء حساب </a> 
+            </h3>
+         </div>
+      </form>
+
+   </section>
+
+   <script src="JS/script.js"></script>
+</body>
+</html>
