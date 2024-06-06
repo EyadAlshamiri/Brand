@@ -47,7 +47,7 @@ window.onscroll = () => {
 }
 
 function in_up (title) {
-   let sgin = document.querySelectorAll('.box') ; 
+      let sgin = document.querySelectorAll('.sgin') ;  
    
    sgin.forEach(content => {
       content.classList.remove ('active') ;
