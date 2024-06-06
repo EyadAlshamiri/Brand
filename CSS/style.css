@@ -119,6 +119,13 @@ section {
    left: 0; 
 }
 
+.content-box{
+   display: flex ;
+   justify-content: space-between; 
+   align-items: center; 
+   z-index: 10;
+}
+
 .home-content { 
    max-width: 60rem ;
    z-index: 99;
